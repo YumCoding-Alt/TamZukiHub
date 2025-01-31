@@ -1,0 +1,147 @@
+local UiMakeLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Msunehub/Uilm/refs/heads/main/UiMat1.lua"))()
+local Notify = UiMakeLib:MakeNotify({
+	["Title"] = "TamZuki V1",
+	["Description"] = "ĐANG CHẠY",
+	["Color"] = Color3.fromRGB(151, 207, 23),
+	["Content"] = "Cảm ơn bạn đã sử dụng script",
+	["Time"] = 1,
+	["Delay"] = 10
+})
+local Window = UiMakeLib:MakeGui({
+	["NameHub"] = "TamZuki V1",
+	["Description"] = "Phiên Bản V1",
+	["Color"] = Color3.fromRGB(151, 207, 23),
+	["Logo Player"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game:GetService("Players").LocalPlayer.UserId .."&width=420&height=420&format=png",
+	["Name Player"] = tostring(game:GetService("Players").LocalPlayer.Name),
+	["Tab Width"] = 140
+})
+local Tab1 = Window:CreateTab({
+	["Name"] = "Hack Chính",
+	["Icon"] = "rbxassetid://7733960981"
+})
+local Tab2 = Window:CreateTab({
+	["Name"] = "Cài đặt",
+	["Icon"] = "rbxassetid://7734053495"
+})
+local Section = Tab1:AddSection("Các Loại Hack")
+local Paragraph = Section:AddParagraph({
+	["Title"] = "Team",
+	["Content"] = "Code:Duy Tâm"
+})
+Paragraph:Set({
+	["Title"] = "Paragraph",
+	["Content"] = "This is a Paragraph"
+})
+local Toggle = Section:AddToggle({
+	["Title"]= "GAY?",
+	["Content"] = "MÀY CÓ GAY KHÔNG",
+	["Default"] = false,
+	["Multi"] = true,
+	["Options"] = {"Option 1", "Option 2"},
+	["Selecting"] = {"Option 1"},
+	["Callback"] = function(Value) 
+		print(Value)
+	end
+})
+Toggle:Set(false)
+print(Toggle.Value)
+local Button = Section:AddButton({
+	["Title"] = "Menu Gangten Hub",
+	["Content"] = "Hack Blox Fruit",
+	["Icon"] = "rbxassetid://16932740082",
+	["Callback"] = function()
+	 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a5c3af437cd698d64379cf75cacb9281.lua"))()
+	end
+})
+local Button = Section:AddButton({
+	["Title"] = "Fix lag",
+	["Content"] = "Fix lag máy yếu",
+	["Icon"] = "rbxassetid://16932740082",
+	["Callback"] = function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
+	end
+})
+local Button = Section:AddButton({
+	["Title"] = "BÍ MẬT",
+	["Content"] = "BÍ MẬT CHE GIẤU",
+	["Icon"] = "rbxassetid://16932740082",
+	["Callback"] = function()
+	  for i,v in pairs(game.Players:GetPlayers()) do
+   if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then
+    spawn(function()
+     local newgui = Instance.new("ScreenGui",v.PlayerGui)
+     newgui.Name = "Screamer"
+     local newimage = Instance.new("ImageLabel",newgui)
+     newimage.Image = "http://www.roblox.com/asset/?id=16635097419"
+     newimage.Size = UDim2.new(1,1,1,1)
+     local s = Instance.new("Sound",newgui)
+     s.SoundId = "rbxassetid://6018028320"
+     s.Volume = 9999999999999999999999999999999999999
+     s.Looped = true
+     s:Play()
+     print("Screamed "..v.Name)
+     while wait(9.4) do
+ 
+      newimage.Parent:Destroy()
+ 
+     end
+    end)
+   end
+  end
+        end
+})
+local Button = Section:AddButton({
+	["Title"] = "???",
+	["Content"] = "???",
+	["Icon"] = "rbxassetid://16932740082",
+	["Callback"] = function()
+	  local delay = 2.5
+function send(text)
+   local A_delay = text
+   local A_2 = "All"
+   local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+   event:FireServer(A_delay, A_2)
+
+end
+while wait(delay) do
+   send("Nah im win")
+	end
+})
+local Slider = Section:AddSlider({
+	["Title"] = "Độ nứng",
+	["Content"] = "Chỉ số nứng",
+	["Min"] = 0,
+	["Max"] = 100,
+	["Increment"] = 1,
+	["Default"] = 30,
+	["Callback"] = function(Value) 
+		print(Value)
+	end
+})
+Slider:Set(30)
+print(Slider.Value)
+local Input = Section:AddInput({
+	["Title"] = "Chim dài không",
+	["Content"] = "Chim bạn dài không?",
+	["Callback"] = function(Value) 
+		print(Value)
+	end
+})
+Input:Set("CM?")
+print(Input.Value)
+local Dropdown = Section:AddDropdown({
+	["Title"] = "Dropdown",
+	["Content"] = "This is a Dropdown",
+	["Multi"] = false,
+	["Options"] = {"Option 1", "Option 2"},
+	["Default"] = {"Option 1"},
+	["Callback"] = function(Value)
+		print(Value)
+	end
+})
+Dropdown:Set({"Option 1"})
+Dropdown:AddOption("Option 3")
+Dropdown:Clear()
+Dropdown:Refresh({"Option 1", "Option 2"}, {"Option 1"})
+print(Dropdown.Value)
+print(Dropdown.Options)
