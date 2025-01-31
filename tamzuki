@@ -1,4 +1,4 @@
-local UiMakeLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/YumCoding-Alt/TamZukiHub/refs/heads/main/tamzuki"))()
+local UiMakeLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Msunehub/Uilm/refs/heads/main/UiMat1.lua"))()
 local Notify = UiMakeLib:MakeNotify({
 	["Title"] = "TamZuki V1",
 	["Description"] = "ĐANG CHẠY",
@@ -101,10 +101,9 @@ function send(text)
    local A_2 = "All"
    local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
    event:FireServer(A_delay, A_2)
-
-end
-while wait(delay) do
-   send("Nah im win")
+  end
+  while wait(delay) do
+  send("Nah im win")
 	end
 })
 local Slider = Section:AddSlider({
