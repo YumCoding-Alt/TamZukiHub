@@ -1,14 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/YumCoding-Alt/TamZukiHub/refs/heads/main/tamzukihub.lua'))()
-
-OrionLib:MakeNotification({
-	Name = "TamZuki Hub",
-	Content = "Đang chạy script",
-	Image = "rbxassetid://4483345998",
-	Time = 3
-})
-
 local Window = OrionLib:MakeWindow({Name = "TamZuki Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "dxl_bf"})
-
 local Tab = Window:MakeTab({
 	Name = "Script",
 	Icon = "rbxassetid://4483345998",
