@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/YumCoding-Alt/TamZukiHub/refs/heads/main/tamzukihub.lua')))()
 
 OrionLib:MakeNotification({
   Name = "TamZuki Hub",
