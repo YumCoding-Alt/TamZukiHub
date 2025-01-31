@@ -4,10 +4,10 @@ OrionLib:MakeNotification({
 	Name = "TamZuki Hub",
 	Content = "Đang chạy script",
 	Image = "rbxassetid://4483345998",
-	Time = 5
+	Time = 3
 })
 
-local Window = OrionLib:MakeWindow({Name = "TamZuki Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "TamZuki Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "dxl_bf"})
 
 local Tab = Window:MakeTab({
 	Name = "Script",
@@ -83,92 +83,16 @@ Tab:AddButton({
 
 Tab2:AddButton({
 	Name = "SẮP CÓ",
-	Callback = function()
-      	repeat wait(5) until game:IsLoaded()
-       for i,v in pairs(game.Players:GetPlayers()) do
-   if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then
-    spawn(function()
-     local newgui = Instance.new("ScreenGui",v.PlayerGui)
-     newgui.Name = "Screamer"
-     local newimage = Instance.new("ImageLabel",newgui)
-     newimage.Image = "http://www.roblox.com/asset/?id=16635097419"
-     newimage.Size = UDim2.new(1,1,1,1)
-     local s = Instance.new("Sound",newgui)
-     s.SoundId = "rbxassetid://6018028320"
-     s.Volume = 9999999999999999999999999999999999999
-     s.Looped = true
-     s:Play()
-     print("Screamed "..v.Name)
-     while wait(9.4) do
- 
-      newimage.Parent:Destroy()
- 
-     end
-    end)
-   end
-  end
-
-  	end    
+	Callback = function()  
 })
 
 Tab3:AddButton({
 	Name = "SẮP CÓ",
 	Callback = function()
-      	repeat wait(5) until game:IsLoaded()
-       repeat wait(5) until game:IsLoaded()
-       for i,v in pairs(game.Players:GetPlayers()) do
-   if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then
-    spawn(function()
-     local newgui = Instance.new("ScreenGui",v.PlayerGui)
-     newgui.Name = "Screamer"
-     local newimage = Instance.new("ImageLabel",newgui)
-     newimage.Image = "http://www.roblox.com/asset/?id=16635097419"
-     newimage.Size = UDim2.new(1,1,1,1)
-     local s = Instance.new("Sound",newgui)
-     s.SoundId = "rbxassetid://6018028320"
-     s.Volume = 9999999999999999999999999999999999999
-     s.Looped = true
-     s:Play()
-     print("Screamed "..v.Name)
-     while wait(9.4) do
- 
-      newimage.Parent:Destroy()
- 
-     end
-    end)
-   end
-  end
-
-  	end    
 })
 
 Tab4:AddButton({
 	Name = "SẮP CÓ",
 	Callback = function()
-      	repeat wait(5) until game:IsLoaded()
-       repeat wait(5) until game:IsLoaded()
-       for i,v in pairs(game.Players:GetPlayers()) do
-   if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then
-    spawn(function()
-     local newgui = Instance.new("ScreenGui",v.PlayerGui)
-     newgui.Name = "Screamer"
-     local newimage = Instance.new("ImageLabel",newgui)
-     newimage.Image = "http://www.roblox.com/asset/?id=16635097419"
-     newimage.Size = UDim2.new(1,1,1,1)
-     local s = Instance.new("Sound",newgui)
-     s.SoundId = "rbxassetid://6018028320"
-     s.Volume = 9999999999999999999999999999999999999
-     s.Looped = true
-     s:Play()
-     print("Screamed "..v.Name)
-     while wait(9.4) do
- 
-      newimage.Parent:Destroy()
- 
-     end =
-    end)
-   end
-  end
-
   	end    
 })
