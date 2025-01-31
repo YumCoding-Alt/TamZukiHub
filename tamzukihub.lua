@@ -1,5 +1,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/YumCoding-Alt/TamZukiHub/refs/heads/main/tamzukihub.lua'))()
+	
 local Window = OrionLib:MakeWindow({Name = "TamZuki Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "dxl_bf"})
+	
 local Tab = Window:MakeTab({
 	Name = "Script",
 	Icon = "rbxassetid://4483345998",
